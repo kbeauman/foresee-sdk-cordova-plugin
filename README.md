@@ -11,28 +11,28 @@
 
 * Add `foresee_configuration.json` file in your `www` folder.
 
-* Add the ForeSee plugin to your project 
+* Add the ForeSee plugin to your project: 
 
    ```
    cordova plugin add https://github.com/foreseecode/foresee-sdk-cordova-plugin
    ```
 
-   > this will automaticly add `compile "com.foresee.sdk:sdk:+"` to your `build.gradle` file
-   > additionally, it will copy the foresee_configuration.json file to `platform/ios` and `platform/android` if exist
+   > This automatically adds `compile "com.foresee.sdk:sdk:+"` to your `build.gradle` file.
+   > Additionally, this copies the foresee_configuration.json file to `platform/ios` and `platform/android` if it exists.
 
-* Within the `deviceready` event handler initialize the ForeSee SDK by invoking 
+* Within the `deviceready` event handler, initialize the ForeSee<sup>&#174</sup> SDK by invoking; 
 
     ```
     cordova.plugins.ForeSeeAPI.start(this.onSuccess, this.onFailure);
     ```
 
-* Now you can use `cordova.plugins.ForeSeeAPI` in your JavaScript code for example:
+* Now you can use `cordova.plugins.ForeSeeAPI` in your JavaScript code. For example:
 
    ```
    cordova.plugins.ForeSeeAPI.checkEligibility(this.onSuccess, this.onFailure);`
    ```
 
-* For all supported methods please check out the official [ForeSee Developer Portal](https://developer.foresee.com)
+* For all supported methods, please check out the official [ForeSee Developer Portal](https://developer.foresee.com).
    
    
    
